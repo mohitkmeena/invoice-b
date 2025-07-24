@@ -18,6 +18,7 @@
 /home/user/invoice-b/src/main/java/com/invoicefinancing/service/InvestmentService.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/controller/NotificationController.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/entity/Invoice.java
+/home/user/invoice-b/src/main/java/com/invoicefinancing/config/WebConfig.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/config/WebSecurityConfig.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/repository/UserRepository.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/entity/Investment.java
@@ -32,6 +33,7 @@
 /home/user/invoice-b/src/main/java/com/invoicefinancing/repository/InvoiceRepository.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/repository/InvestmentRepository.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/dto/PaymentDetailsRequest.java
+/home/user/invoice-b/src/main/java/com/invoicefinancing/config/SimpleCORSFilter.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/entity/Notification.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/entity/PaymentDetails.java
 /home/user/invoice-b/src/main/java/com/invoicefinancing/security/AuthEntryPointJwt.java
