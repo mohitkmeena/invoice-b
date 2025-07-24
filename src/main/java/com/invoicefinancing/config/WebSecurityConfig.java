@@ -85,10 +85,16 @@ public class WebSecurityConfig {
     @Bean
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("https://5173-firebase-invoice-f-1753287284228.cluster-m7dwy2bmizezqukxkuxd55k5ka.cloudworkstations.dev"));
+        configuration.setAllowedOriginPatterns(List.of(
+            "https://*.web.app",
+            "https://*.firebaseapp.com",
+            "http://localhost:*",
+            "https://localhost:*",
+            "https://*.cloudworkstations.dev"
+        ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"));
         configuration.setAllowedHeaders(List.of("*"));
-        configuration.setAllowCredentials(true); // Keep false unless sending cookies or auth headers
+        configuration.setAllowCredentials(true);
         configuration.setMaxAge(3600L); // 1 hour
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
