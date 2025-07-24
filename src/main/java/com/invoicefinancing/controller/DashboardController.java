@@ -33,7 +33,7 @@ public class DashboardController {
 
     @GetMapping("/platform-summary")
     public ResponseEntity<?> getPlatformSummary() {
-        // User Statistics
+        // User Statistic
         long totalUsers = userRepository.count();
         long totalMSMEs = userRepository.findByUserType(User.UserType.MSME).size();
         long totalInvestors = userRepository.findByUserType(User.UserType.INVESTOR).size();

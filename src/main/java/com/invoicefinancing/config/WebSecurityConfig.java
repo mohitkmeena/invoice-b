@@ -67,11 +67,12 @@ public class WebSecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/dashboard/platform-summary").permitAll()
                 .requestMatchers("/auth/**").permitAll()
-                .requestMatchers("/test/**").permitAll()
-                .requestMatchers("/admin/**").hasRole("ADMIN")
-                .requestMatchers("/msme/**").hasRole("MSME")
-                .requestMatchers("/investor/**").hasRole("INVESTOR")
+                .requestMatchers("/api/test/**").permitAll()
+                .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                .requestMatchers("/api/msme/**").hasRole("MSME")
+                .requestMatchers("/api/investor/**").hasRole("INVESTOR")
                 .anyRequest().authenticated()
             );
 
@@ -82,9 +83,8 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
+    public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-
         configuration.setAllowedOrigins(List.of("https://5173-firebase-invoice-f-1753287284228.cluster-m7dwy2bmizezqukxkuxd55k5ka.cloudworkstations.dev"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"));
         configuration.setAllowedHeaders(List.of("*"));
